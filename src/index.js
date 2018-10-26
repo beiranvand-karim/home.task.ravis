@@ -8,8 +8,6 @@ import reducer from "./reducers";
 const middleware = applyMiddleware(thunk);
 const store = createStore(reducer, middleware);
 
-
-
 ReactDOM.render(
     <Provider store={store}>
         <App/>
