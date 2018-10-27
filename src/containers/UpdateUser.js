@@ -4,6 +4,7 @@ import Form from "../components/Form";
 import {readUser, updateUser} from "../actions/UserActions";
 import connect from "react-redux/es/connect/connect";
 import {withRouter} from "react-router-dom";
+import Wrapper from "../components/Wrapper";
 
 class UpdateUser extends Component {
     componentDidMount() {
@@ -40,44 +41,43 @@ class UpdateUser extends Component {
         if (this.props.selectedUser) {
             const {name, family, nickName, phoneNumber, email, community, birthDay, gender} = this.props.selectedUser;
             return <Fragment>
-                <h1>this update component</h1>
-                <div>{this.props.match.params.id}</div>
-
-                <Form onSubmit={this.checkOnLogin.bind(this)}>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.name === '' ? name : this.state.name}
-                        placeholder="name" name="name" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.family === '' ? family : this.state.family}
-                        placeholder="family" name="family" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.nickName === '' ? nickName : this.state.nickName}
-                        placeholder="nickName" name="nickName" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.phoneNumber === '' ? phoneNumber : this.state.phoneNumber}
-                        placeholder="phoneNumber" name="phoneNumber" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.email === '' ? email : this.state.email}
-                        placeholder="email" name="email" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.community === '' ? community : this.state.community}
-                        placeholder="community" name="community" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.birthDay === '' ? birthDay : this.state.birthDay}
-                        placeholder="birthDay" name="birthDay" type="text"/>
-                    <Input
-                        onChange={e => this.change(e)}
-                        value={this.state.gender === '' ? gender : this.state.gender}
-                        placeholder="gender" name="gender" type="text"/>
-                    <button type="submit">submit</button>
-                </Form>
+                <Wrapper>
+                    <Form onSubmit={this.checkOnLogin.bind(this)}>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.name === '' ? name : this.state.name}
+                            placeholder="name" name="name" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.family === '' ? family : this.state.family}
+                            placeholder="family" name="family" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.nickName === '' ? nickName : this.state.nickName}
+                            placeholder="nickName" name="nickName" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.phoneNumber === '' ? phoneNumber : this.state.phoneNumber}
+                            placeholder="phoneNumber" name="phoneNumber" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.email === '' ? email : this.state.email}
+                            placeholder="email" name="email" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.community === '' ? community : this.state.community}
+                            placeholder="community" name="community" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.birthDay === '' ? birthDay : this.state.birthDay}
+                            placeholder="birthDay" name="birthDay" type="text"/>
+                        <Input
+                            onChange={e => this.change(e)}
+                            value={this.state.gender === '' ? gender : this.state.gender}
+                            placeholder="gender" name="gender" type="text"/>
+                        <button type="submit">submit</button>
+                    </Form>
+                </Wrapper>
             </Fragment>
         } else {
             return null

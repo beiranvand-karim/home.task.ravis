@@ -2,14 +2,16 @@ import React, {Component, Fragment} from 'react';
 import CreateUser from "./CreateUser";
 import {connect} from "react-redux";
 import UserList from "./UserList";
+import AlignCenter from "../components/AlignCenter";
 
 class DashBoard extends Component {
     render() {
         return (
             <Fragment>
-                <h1>this dashboard</h1>
-                <CreateUser/>
-                <UserList/>
+                <AlignCenter>
+                    <CreateUser/>
+                    <UserList/>
+                </AlignCenter>
             </Fragment>
         )
     }
