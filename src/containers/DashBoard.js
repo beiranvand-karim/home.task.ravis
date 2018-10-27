@@ -8,7 +8,7 @@ class DashBoard extends Component {
         return (
             <Fragment>
                 <h1>this dashboard</h1>
-                <CreateUser />
+                <CreateUser/>
                 <UserList/>
             </Fragment>
         )

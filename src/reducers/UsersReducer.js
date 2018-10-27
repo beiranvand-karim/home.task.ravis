@@ -1,7 +1,8 @@
-import {CREATE_USER, DELETE_USER, READ_USERS, UPDATE_USER} from "../actions/UserActions";
+import {CREATE_USER, DELETE_USER, READ_USER, READ_USERS, UPDATE_USER} from "../actions/UserActions";
 
 const initialState = {
-    users: []
+    users: [],
+    selectedUser: null
 };
 
 export default function UsersReducer(state = initialState, action) {
@@ -26,6 +27,12 @@ export default function UsersReducer(state = initialState, action) {
             return {
                 ...state,
                 users
+            };
+        case READ_USER:
+            const selectedUser = users[action.payload];
+            return {
+                ...state,
+                selectedUser
             };
         default:
             return state;
