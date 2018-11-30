@@ -1,7 +1,6 @@
-import React, {Component, Fragment} from 'react';
-import {withRouter} from "react-router-dom";
-import Wrapper from "../components/Wrapper";
-import Input from "../components/Input";
+import React, {Component, Fragment} from 'react'
+import {withRouter} from "react-router-dom"
+import './SignIn.scss'
 
 export class SignIn extends Component {
    constructor() {
@@ -36,15 +35,17 @@ export class SignIn extends Component {
    render() {
       return (
          <Fragment>
-            <Wrapper>
+            <div className="signInContainer">
                <form onSubmit={this.checkOnLogin.bind(this)}>
-                  <Input
+                  <input
+                     className="inputElement"
                      name="userName"
                      onChange={e => this.change(e)}
                      value={this.state.userName}
                      placeholder="userName"
                      type="text"/>
-                  <Input
+                  <input
+                     className="inputElement"
                      name="passWord"
                      value={this.state.passWord}
                      onChange={e => this.change(e)}
@@ -52,7 +53,7 @@ export class SignIn extends Component {
                      type="password"/>
                   <button type="submit">sign in</button>
                </form>
-            </Wrapper>
+            </div>
          </Fragment>
       )
    }

@@ -1,8 +1,8 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import SignIn from "./containers/SignIn";
-import DashBoard from "./containers/DashBoard";
-import UpdateUser from "./containers/UpdateUser";
+import DashBoard from "./containers/DashBoard"
+import UpdateUser from "./containers/UpdateUser"
 
 const App = () => (
    <Router>
@@ -14,4 +14,4 @@ const App = () => (
       </Switch>
    </Router>
 );
-export default App;
+export default App

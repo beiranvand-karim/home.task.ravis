@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn Component should matches the snapshot 1`] = `
+<div
+  className="signInContainer"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="inputElement"
+      name="userName"
+      onChange={[Function]}
+      placeholder="userName"
+      type="text"
+      value=""
+    />
+    <input
+      className="inputElement"
+      name="passWord"
+      onChange={[Function]}
+      placeholder="passWord"
+      type="password"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      sign in
+    </button>
+  </form>
+</div>
+`;

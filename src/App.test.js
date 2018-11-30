@@ -1,8 +1,8 @@
 import App from './App'
-import {MemoryRouter} from "react-router-dom";
-import {mount} from "enzyme";
-import SignIn from "./containers/SignIn";
-import DashBoard from "./containers/DashBoard";
+import {MemoryRouter} from "react-router-dom"
+import {mount} from "enzyme"
+import {SignIn} from "./containers/SignIn"
+import DashBoard from "./containers/DashBoard"
 import React from 'react'
 
 describe('App', () => {
