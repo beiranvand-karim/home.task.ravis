@@ -1,0 +1,13 @@
+
+.userListContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.userListHeader {
+  margin: auto;
+  &__row {
+    display: inline-block;
+    width: 90px;
+  }
+}

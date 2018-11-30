@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList Component should matches the snapshot 1`] = `
+<div
+  className="userListContainer"
+>
+  <div
+    className="userListHeader"
+  >
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      name
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      family
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      nickName
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      p. Number
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      email
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      community
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      birthDay
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      gender
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      edit
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      delete
+    </div>
+  </div>
+  <div
+    className="userListHeader"
+  >
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      somevalue
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      <button
+        className="pushHistory"
+        onClick={[Function]}
+      >
+        edit
+      </button>
+    </div>
+    <div
+      className="userListHeader userListHeader__row"
+    >
+      <button
+        className="deleteUser"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    </div>
+  </div>
+</div>
+`;
