@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import {connect} from "react-redux"
-import {createUser} from "../actions/UserActions"
+import {createUser} from "../../actions/UserActions"
 import './CreateUser.scss'
 
 const empty = '';

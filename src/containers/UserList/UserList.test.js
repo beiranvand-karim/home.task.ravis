@@ -2,7 +2,7 @@ import React from 'react'
 import {shallow} from "enzyme"
 import renderer from 'react-test-renderer'
 import {MemoryRouter} from 'react-router-dom'
-import {UserList} from "./index";
+import {UserList} from "./"
 
 describe('UserList Component', () => {
    const mockDeleteUser = jest.fn();
