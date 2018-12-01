@@ -1,14 +1,12 @@
-import React, {Component, Fragment} from 'react';
-import Input from "../components/Input";
-import Form from "../components/Form";
-import {readUser, updateUser} from "../actions/UserActions";
-import {connect} from "react-redux";
-import {withRouter} from "react-router-dom";
-import Wrapper from "../components/Wrapper";
+import React, {Component, Fragment} from 'react'
+import {readUser, updateUser} from "../../actions/UserActions"
+import {connect} from "react-redux"
+import {withRouter} from "react-router-dom"
+import './UpdateUser.scss'
 
-class UpdateUser extends Component {
+export class UpdateUser extends Component {
    componentDidMount() {
-      this.props.dispatch(readUser(this.props.match.params.id));
+      this.props.readUser(this.props.match.params.id);
    }
 
    state = {
@@ -34,7 +32,7 @@ class UpdateUser extends Component {
       const keys = Object.keys(this.state);
       const values = Object.values(this.state);
       const user = Object.assign({}, ...keys.map((n, index) => ({[n]: values[index] === '' ? userValues[index] : values[index]})));
-      this.props.dispatch(updateUser(this.props.match.params.id, user));
+      this.props.updateUser(this.props.match.params.id, user);
       this.props.history.push(`/dashBoard`)
    };
 
@@ -42,43 +40,50 @@ class UpdateUser extends Component {
       if (this.props.selectedUser) {
          const {name, family, nickName, phoneNumber, email, community, birthDay, gender} = this.props.selectedUser;
          return <Fragment>
-            <Wrapper>
-               <Form onSubmit={this.checkOnLogin.bind(this)}>
-                  <Input
+            <div className="updateUserContainer">
+               <form className="updateUserForm" onSubmit={this.checkOnLogin.bind(this)}>
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.name === '' ? name : this.state.name}
                      placeholder="name" name="name" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.family === '' ? family : this.state.family}
                      placeholder="family" name="family" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.nickName === '' ? nickName : this.state.nickName}
                      placeholder="nickName" name="nickName" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.phoneNumber === '' ? phoneNumber : this.state.phoneNumber}
                      placeholder="phoneNumber" name="phoneNumber" type="text"/>
-                  <Input
+                  <input
                      onChange={e => this.change(e)}
                      value={this.state.email === '' ? email : this.state.email}
                      placeholder="email" name="email" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.community === '' ? community : this.state.community}
                      placeholder="community" name="community" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.birthDay === '' ? birthDay : this.state.birthDay}
                      placeholder="birthDay" name="birthDay" type="text"/>
-                  <Input
+                  <input
+                     className="updateUserForm updateUserForm__input"
                      onChange={e => this.change(e)}
                      value={this.state.gender === '' ? gender : this.state.gender}
                      placeholder="gender" name="gender" type="text"/>
                   <button type="submit">submit</button>
-               </Form>
-            </Wrapper>
+               </form>
+            </div>
          </Fragment>
       } else {
          return null
@@ -86,5 +91,9 @@ class UpdateUser extends Component {
    }
 }
 
+const mapDispatchToProps = dispatch => ({
+   readUser: (id) => dispatch(readUser(id)),
+   updateUser: (id, user) => dispatch(updateUser(id, user))
+});
 const mapStateToProps = state => ({selectedUser: state.usersReducer.selectedUser});
-export default withRouter(connect(mapStateToProps)(UpdateUser));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UpdateUser));

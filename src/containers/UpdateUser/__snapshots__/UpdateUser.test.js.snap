@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateUser Component should matches the snapshot 1`] = `
+<div
+  className="updateUserContainer"
+>
+  <form
+    className="updateUserForm"
+    onSubmit={[Function]}
+  >
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="name"
+      onChange={[Function]}
+      placeholder="name"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="family"
+      onChange={[Function]}
+      placeholder="family"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="nickName"
+      onChange={[Function]}
+      placeholder="nickName"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="phoneNumber"
+      onChange={[Function]}
+      placeholder="phoneNumber"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      name="email"
+      onChange={[Function]}
+      placeholder="email"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="community"
+      onChange={[Function]}
+      placeholder="community"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="birthDay"
+      onChange={[Function]}
+      placeholder="birthDay"
+      type="text"
+      value="somevalue"
+    />
+    <input
+      className="updateUserForm updateUserForm__input"
+      name="gender"
+      onChange={[Function]}
+      placeholder="gender"
+      type="text"
+      value="somevalue"
+    />
+    <button
+      type="submit"
+    >
+      submit
+    </button>
+  </form>
+</div>
+`;
